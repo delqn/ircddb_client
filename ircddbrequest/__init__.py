@@ -1,2 +1,2 @@
-from .ircddbrequest import *
-from .ircddbpull import *
+from .push import *
+from .pull import *
