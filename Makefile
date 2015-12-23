@@ -17,3 +17,7 @@ install-prepush:
 .PHONY: clean
 clean:
 	find . -name \*.pyc -delete
+
+.PHONY: test
+test: clean lint
+	nosetests $(find . -name "_test.py")

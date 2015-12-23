@@ -2,14 +2,15 @@
 
 import time
 
-from ircddbclient import PushMessage, PullMessages
+from ircddbclient import Push, Pull
 
 SLEEP_SECONDS = 20
 
 if __name__ == '__main__':
-    puller = PullMessages()
+    puller = Pull()
+    pusher = Push(class_name='ParsedStream')
     while True:
         for message in puller.pull():
             print message
-            PushMessage(class_name='ParsedStream', data=message)()
+            pusher.push(data=message)
         time.sleep(SLEEP_SECONDS)
