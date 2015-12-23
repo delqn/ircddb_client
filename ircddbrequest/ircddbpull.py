@@ -2,6 +2,7 @@ import urllib2
 
 URL = "http://live2.ircddb.net:8080/jj3.yaws?p={}"
 
+
 class PullMessages(object):
     _page = 0
 

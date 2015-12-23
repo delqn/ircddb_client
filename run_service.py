@@ -48,12 +48,12 @@ cache = {}
 
 
 def extract(msg):
-    data = {}
+    _data = {}
     for k, regex, transform in PIECES:
         matches = re.findall(regex, msg)
         value = matches[0] if len(matches) else None
-        data[k] = transform(value) if transform else value
-    return data
+        _data[k] = transform(value) if transform else value
+    return _data
 
 
 def expire_cache():
@@ -62,12 +62,12 @@ def expire_cache():
         del cache[k]
 
 
-def push_message(message):
-    PushMessage(class_name='Stream', data={'Message': message})()
+def push_message(msg):
+    PushMessage(class_name='Stream', data={'Message': msg})()
 
 
-def push_parsed_message(data):
-    PushMessage(class_name='ParsedStream', data=data)()
+def push_parsed_message(data_):
+    PushMessage(class_name='ParsedStream', data=data_)()
 
 
 if __name__ == '__main__':
