@@ -35,7 +35,8 @@ class Pull(object):
             for raw_message in raw_messages:
                 if not self._should_ignore_message(raw_message):
                     parsed_messages.append(self._parser.parse(raw_message))
-            self._next_page = parsed_messages[-1]['rowID']
+            if parsed_messages:
+                self._next_page = parsed_messages[-1]['rowID']
             return parsed_messages
         except urllib2.URLError as e:
             print e
