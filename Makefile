@@ -5,8 +5,8 @@ all: install-prepush lint
 
 .PHONY: lint
 lint:
-	pep8 ircddbrequest/ ./*.py
-	pylint --rcfile=.pylintrc ircddbrequest/ ./*.py
+	pep8 ircddbclient/ ./*.py
+	pylint --rcfile=.pylintrc ircddbclient/ ./*.py
 
 .PHONY: install-prepush
 install-prepush:

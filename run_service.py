@@ -5,7 +5,7 @@ import re
 import time
 import threading
 
-from ircddbrequest import PushMessage, PullMessages
+from ircddbclient import PushMessage, PullMessages
 
 CACHE_TTL = 300  # seconds
 SLEEP_SECONDS = 20
