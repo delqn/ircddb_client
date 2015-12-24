@@ -43,7 +43,7 @@ class Push(object):
             print e
         if 'error' in response:
             raise ValueError('[Parse Error] ' + response['error'])
-        results = response['results']
+        results = response.get('results')
         return results[0] if results else {}
 
     def _request(self, method, url, data):
