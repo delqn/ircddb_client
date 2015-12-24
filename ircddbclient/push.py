@@ -69,4 +69,4 @@ class Push(object):
         else:
             method = 'POST'
             url = self.URL.format(self.class_name)
-        return self._request(method, url, json.dumps(data))
+        return self._request(method, url, data)
