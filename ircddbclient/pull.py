@@ -4,7 +4,7 @@ from .cache import Cache
 from .parser import Parser
 
 EXTERNAL_KEYS = ['when', 'myCall', 'rpt1', 'rpt2', 'urCall', 'flags', 'myRadio', 'dest',
-                 'txStats', 'key']
+                 'txStats', 'info', 'key']
 URL = "http://live2.ircddb.net:8080/jj3.yaws?p={}"
 
 
