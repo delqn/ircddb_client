@@ -1,3 +1,4 @@
+import socket
 import urllib2
 
 from .cache import Cache
@@ -39,6 +40,9 @@ class Pull(object):
                 self._next_page = parsed_messages[-1]['rowID']
             return parsed_messages
         except urllib2.URLError as e:
+            print e
+            return []
+        except socket.error as e:
             print e
             return []
 
