@@ -1,7 +1,7 @@
 ## This is a server component for an ircDDB client.
 
 #### This software:
-1. retrieves the most recent raw ircDDB messages
+1. retrieves raw ircDDB messages
 2. transforms these into a format easy to use by iOS/Android apps
 3. uploads them to Parse for consumption by an iOS/Android app.
 
