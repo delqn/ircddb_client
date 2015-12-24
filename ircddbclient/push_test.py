@@ -14,5 +14,4 @@ class PushTest(unittest.TestCase):
 
     def test_push_pop(self):
         self._push.push(data={'a': 1})
-        self._push._request.assert_called_once_with(
-            'POST', '/1/classes/ParsedStream', '{"a": 1}')
+        self._push._request.assert_called_once_with('POST', '/1/classes/ParsedStream', {'a': 1})
